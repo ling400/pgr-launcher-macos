@@ -1,0 +1,23 @@
+# Build artifacts
+build/
+*.dmg
+*.app.tar.gz
+
+# Local test / runtime data
+.test/
+runtime/
+*.log
+*.dmp
+
+# Game binaries or extracted official files (never commit)
+research/samples/
+**/PGR.exe
+**/GameAssembly.dll
+**/UnityPlayer.dll
+**/*.usm
+**/PGR_Data/
+Games/
+Bottle/
+
+# macOS
+.DS_Store
