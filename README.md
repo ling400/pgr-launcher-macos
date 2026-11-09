@@ -48,6 +48,21 @@
 - 约 2GB 可用空间（Wine 运行时 + DXMT + 安装器缓存）；游戏本体另需约 20GB+
 - 首次运行需要联网；键盘映射需要在「系统设置 → 隐私与安全性 → 辅助功能」中授权
 
+## 📦 安装包（.pkg）
+
+除 DMG 外，也可以生成 macOS 安装包（安装到 `/Applications/战双启动器.app`）：
+
+```bash
+./scripts/build.sh release     # 先构建 App
+./scripts/package-pkg.sh      # 生成 build/PGRLauncher.pkg
+```
+
+- 双击 `PGRLauncher.pkg` → 输入管理员密码 → 安装到 Applications；
+  或终端执行：`sudo installer -pkg build/PGRLauncher.pkg -target /`
+- 本机未做 Apple 公证（无 Developer ID），安装包未签名；如提示“无法验证开发者”，
+  右键 → 打开，或到「系统设置 → 隐私与安全性 → 仍要打开」。
+- 安装包只包含启动器本体（约 1.3MB），不含游戏、Wine 运行时（首次运行 App 时自动下载）。
+
 ## 🚀 快速开始
 
 ```bash
